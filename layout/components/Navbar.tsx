@@ -1,13 +1,14 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import versionsList from "../../versions.json";
+// import versionsList from "../../versions.json";
 import { useRouter } from "next/router";
 
 export default function Navbar(props: any) {
   const [isOpen, setOpen] = useState(false);
+  console.log(props);
   const getVersions = () => {
     let arr = [];
-    let versionsInfo = versionsList.versions;
+    let versionsInfo = props.versionsData;
     for (let i = 0; i < versionsInfo.length; i++) {
       arr.push(Object.keys(versionsInfo[i])[0]);
     }
