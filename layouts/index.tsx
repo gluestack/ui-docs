@@ -6,7 +6,7 @@ import { Content } from "../components/Content";
 function Layout(props: any) {
   return (
     <div className="relative h-full overflow-hidden">
-      <Navbar setVersion={props.setVersion} />
+      <Navbar setVersion={props.setVersion} version={props.version} />
       <div className="h-full w-full flex row">
         <Sidebar
           {...props.versionInfo[props.version]}

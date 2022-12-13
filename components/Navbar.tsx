@@ -14,13 +14,14 @@ export default function Navbar(props: any) {
     return arr;
   };
   const router = useRouter();
-  const [versions, setVerions] = useState(getVersions());
+  const [versions, setVerrions] = useState(getVersions());
 
   const handleDropDown = () => {
     setOpen(!isOpen);
   };
 
   const handleClick = (version: any) => {
+    console.log(version);
     props.setVersion(version);
     setOpen(false);
     router.push("/" + version);
@@ -49,7 +50,7 @@ export default function Navbar(props: any) {
                 type="button"
                 onClick={handleDropDown}
               >
-                Versions
+                {props.version}
                 <svg
                   className="ml-2 w-4 h-4"
                   aria-hidden="true"

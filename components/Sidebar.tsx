@@ -1,101 +1,26 @@
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
 import Link from "next/link";
-// import { sidebarData } from "pages/1.0.x/sidebar";
-import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
-// export default function Sidebar(props: any) {
-//   console.log(props, "PPP");
-//   const { sidebar } = props;
-//   return (
-//     // @ts-ignore
-
-//     <aside className="w-64" aria-label="Sidebar">
-//       <div className="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
-//         <ul className="space-y-2">
-//           <li>
-//             <a
-//               href="#"
-//               className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-//             >
-//               <span className="ml-3">Dashboard</span>
-//             </a>
-//           </li>
-//         </ul>
-//         <ul className="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
-//           <li>
-//             <a
-//               href="#"
-//               className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
-//             >
-//               <span className="ml-4">Upgrade to Pro</span>
-//             </a>
-//           </li>
-//         </ul>
-//       </div>
-//     </aside>
-//   );
-// }
-
 export default function Sidebar(props: any) {
-  // const sidebarData = await getSidebarJson(props.version);
-  // console.log(sidebarData, "SIDEBAR");
   const baseDirPath = process.cwd();
-  // useEffect(() => {
-  //   // React advises to declare the async function directly inside useEffect
-  //   async function getSidebarJson() {
-  //     const data = await import(
-  //       baseDirPath + `pages/${props.version}/sidebar.json`
-  //     );
-  //     console.log(data);
-  //   }
-
-  //   // You need to restrict it at some point
-  //   // This is just dummy code and should be replaced by actual
-
-  //   getSidebarJson();
-  // }, []);
 
   const [collapseShow, setCollapseShow] = React.useState("hidden");
   return (
-    <Suspense fallback={`Loading...`}>
-      <nav className="md:left-0 fixed md:h-full md:overflow-y-auto md:flex-row md:flex-nowrap shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-80 z-10 ">
-        <div className="md:flex-col md:items-stretch overflow-hidden md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full">
-          {/* Toggler */}
-          <button
-            className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-red-300 rounded border border-solid border-transparent"
-            type="button"
-            onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}
-          >
-            <i className="fas fa-bars">knkn</i>
-          </button>
-          <div className="pt-4">
-            {props.sidebar.map((sidebarItem: any) => {
-              return (
-                <div className="mt-4 ">
-                  <SidebarItems props={sidebarItem} version={props.version} />
-                </div>
-              );
-            })}
-            {/* {props.sidebar.map((item) => {
-              return (
-                <div className=" py-3 ">
-                  {item?.type == "heading" && (
-                    <h2 className="font-medium leading-tight text-lg mt-0 mb-2 text-gray-600 px-6">
-                      {item.title}
-                    </h2>
-                  )}
-                  <div className="text-gray-800 py-3 hover:bg-gray-100 hover:cursor-pointer px-6 ">
-                    n kjnjk
-                  </div>
-                </div>
-              );
-            })} */}
-          </div>
+    <nav className="md:left-0 fixed md:h-full md:overflow-y-auto md:flex-row md:flex-nowrap shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-80 z-10 ">
+      <div className="md:flex-col md:items-stretch overflow-hidden md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full">
+        <div className="pt-4">
+          {props.sidebar.map((sidebarItem: any) => {
+            return (
+              <div className="mt-4 ">
+                <SidebarItems props={sidebarItem} version={props.version} />
+              </div>
+            );
+          })}
         </div>
-      </nav>
-    </Suspense>
+      </div>
+    </nav>
   );
 }
 
