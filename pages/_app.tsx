@@ -1,6 +1,8 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import "../styles/globals.css";
+// @ts-ignore
+// import Layout from "@gluestack/docs-layout";
 import Layout from "../layout";
 import { versions } from "../versions.json";
 
@@ -22,6 +24,7 @@ function MyApp({ Component, pageProps }: any) {
       version={version}
       versionInfo={getSidebarJsonData()}
       setVersion={setVersion}
+      versionsData={versions}
     >
       <Component {...pageProps} />
     </Layout>
