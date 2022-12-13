@@ -1,6 +1,6 @@
 {
   "name": "@gluestack/docs-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "scripts": {
     "dev": "next dev",
@@ -10,9 +10,7 @@
     "build:layout": "bob build",
     "clean": "rm -rf lib"
   },
-  "dependencies": {
-    "@gluestack/docs-layout": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@mdx-js/loader": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
