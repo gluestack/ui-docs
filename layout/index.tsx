@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar";
-import { Content } from "../components/Content";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import { Content } from "./components/Content";
 
 function Layout(props: any) {
   return (
@@ -14,7 +14,6 @@ function Layout(props: any) {
         />
         <Content {...props} />
       </div>
-      {/* Header */}
     </div>
   );
 }

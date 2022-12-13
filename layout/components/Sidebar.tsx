@@ -1,7 +1,6 @@
 import { useState } from "react";
 import React from "react";
 import Link from "next/link";
-import { Suspense } from "react";
 
 export default function Sidebar(props: any) {
   const baseDirPath = process.cwd();

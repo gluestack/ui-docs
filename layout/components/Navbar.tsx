@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import versionsList from "../versions.json";
+import versionsList from "../../versions.json";
 import { useRouter } from "next/router";
 
 export default function Navbar(props: any) {
