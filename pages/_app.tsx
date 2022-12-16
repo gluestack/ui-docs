@@ -2,8 +2,8 @@ import Head from "next/head";
 import React, { useState } from "react";
 import "../styles/globals.css";
 // @ts-ignore
-import Layout from "@gluestack/docs-layout";
-// import Layout from "../layout";
+// import Layout from "@gluestack/docs-layout";
+import Layout from "../layout";
 import { versions } from "../versions.json";
 
 function MyApp({ Component, pageProps }: any) {
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: any) {
       }
     }
   }
-  console.log("Loaded", version);
+
   return (
     <Layout
       version={version}

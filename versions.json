@@ -5,55 +5,15 @@
         "sidebar": [
           {
             "type": "heading",
-            "title": "Heading Example for v1.0.x",
+            "title": "Introduction",
             "pages": [
               {
-                "id": "mdx-example",
-                "title": "MDX Example 1"
+                "id": "getting-started",
+                "title": "Getting Started"
               },
               {
-                "id": "react-example",
-                "title": "React Example 1"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "1.1.x": {
-        "sidebar": [
-          {
-            "type": "heading",
-            "title": "Heading Example for v1.1.x",
-            "pages": [
-              {
-                "id": "mdx-example",
-                "title": "MDX Example 2"
-              },
-              {
-                "id": "react-example",
-                "title": "React Example 2"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "1.2.x": {
-        "sidebar": [
-          {
-            "type": "heading",
-            "title": "Heading Example for v1.2.x",
-            "pages": [
-              {
-                "id": "mdx-example",
-                "title": "MDX Example 3"
-              },
-              {
-                "id": "react-example",
-                "title": "React Example 3"
+                "id": "components",
+                "title": "Component"
               }
             ]
           }

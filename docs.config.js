@@ -1,5 +1,5 @@
 module.exports = {
   DOCS_URL: "",
-  indexSlugFileName: "react-example",
+  indexSlugFileName: "getting-started",
   REPO_BRANCH: "master",
 };

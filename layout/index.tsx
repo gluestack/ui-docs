@@ -5,7 +5,7 @@ import { Content } from "./components/Content";
 
 function Layout(props: any) {
   return (
-    <div className="relative h-[100vh] overflow-hidden">
+    <div className="relative h-[100vh] w-full ">
       <Navbar
         setVersion={props.setVersion}
         version={props.version}

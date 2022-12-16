@@ -6,5 +6,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: ["responsive"],
+  plugins: ["responsive", require("@tailwindcss/typography")],
 };
